@@ -1,8 +1,5 @@
 package random.examples;
 
-import static java.lang.Integer.MAX_VALUE;
-import static java.lang.Integer.MIN_VALUE;
-
 import java.util.HashSet;
 import java.util.Random;
 
@@ -13,7 +10,6 @@ import java.util.Random;
  */
 public class RandomExample {
     public static void main(String[] args) {
-
 //        var unique = new HashSet<Integer>();
 //        new Random().ints(1_000_000, MIN_VALUE, MAX_VALUE)
 //                .forEach((int num) -> {
@@ -22,9 +18,8 @@ public class RandomExample {
 //                            else unique.add(num);
 //                        }
 //                );
-
-        var unique = new HashSet<Integer>();
-        new Random().ints(0, MAX_VALUE)
+        HashSet<Integer> unique = new HashSet<>();
+        new Random().ints(1_000_000, 0, 5_000_000)
                 .forEach((int num) -> {
                             System.out.println(num);
                             if (isFalse(unique.add(num)))
