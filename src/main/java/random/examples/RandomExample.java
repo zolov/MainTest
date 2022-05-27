@@ -21,9 +21,9 @@ public class RandomExample {
         HashSet<Integer> unique = new HashSet<>();
         new Random().ints(1_000_000, 0, 5_000_000)
                 .forEach((int num) -> {
-                            System.out.println(num);
-                            if (isFalse(unique.add(num)))
-                                System.err.println(num);
+                            if (isFalse(unique.add(num))) {
+                                System.err.printf("%d non-unique%n", num);
+                            } System.err.printf("%d unique%n", num);
                         }
                 );
     }
