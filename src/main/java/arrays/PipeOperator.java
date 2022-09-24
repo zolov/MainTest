@@ -1,6 +1,5 @@
 package arrays;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 /**
