@@ -3,10 +3,6 @@ package lombok.examples;
 import static java.util.Objects.nonNull;
 import static org.apache.commons.lang3.ObjectUtils.allNotNull;
 
-import org.apache.commons.lang3.ObjectUtils;
-
-import java.nio.charset.StandardCharsets;
-
 /**
  * LombokMain.
  *
@@ -14,13 +10,15 @@ import java.nio.charset.StandardCharsets;
  */
 public class LombokMain {
     public static void main(String[] args) {
+
+        var client = new Client();
+        client.setFirstName("");
+
         Phone phone = Phone.builder()
                 .phoneCode("7")
                 .codeIso("603")
                 .phoneNumber("999661221")
                 .build();
-
-//        Phone phone = null;
 
         if (nonNull(phone)
                 && allNotNull(phone.getPhoneCode(), phone.getCodeIso(), phone.getPhoneNumber())) {

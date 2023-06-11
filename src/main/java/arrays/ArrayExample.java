@@ -1,9 +1,5 @@
 package arrays;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * ArrayExample.
  *
@@ -14,22 +10,22 @@ public class ArrayExample {
 
     public static void main(String[] args) {
 
-        String[][] contries = new String[5][5];
-        for (int i = 0; i < contries.length; i++) {
-            for (int k = 0; k < contries[i].length; k++) {
-                contries[i][k] = str(k);
+        String[][] countries = new String[5][5];
+        for (int i = 0; i < countries.length; i++) {
+            for (int k = 0; k < countries[i].length; k++) {
+                countries[i][k] = str(k);
             }
         }
 
-        for (int i = 0; i < contries.length; i++) {
+        for (int i = 0; i < countries.length; i++) {
             System.out.println("Внешний массив: " + i);
-            for (int k = 0; k < contries[i].length; k++) {
-                System.out.println("Внутренний массив: " + contries[i][k]);
+            for (int k = 0; k < countries[i].length; k++) {
+                System.out.println("Внутренний массив: " + countries[i][k]);
             }
         }
 
 
-        for (String[] arr: contries) {
+        for (String[] arr: countries) {
             for (String str: arr) {
                 System.out.println(str);
             }

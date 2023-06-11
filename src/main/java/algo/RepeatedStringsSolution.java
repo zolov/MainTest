@@ -38,5 +38,6 @@ public class RepeatedStringsSolution {
         for (int i = 0; i < strings.length; i++) { // 6)
             System.out.print(strings[i] + ", ");
         }
+        scanner.close();
     }
 }

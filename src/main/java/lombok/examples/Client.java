@@ -1,7 +1,6 @@
 package lombok.examples;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.List;
@@ -11,14 +10,15 @@ import java.util.List;
  *
  * @author Igor_Zolov
  */
-@Data
+@Getter
+@Setter
 @AllArgsConstructor(staticName = "of")
-@FieldDefaults(makeFinal = true)
+@NoArgsConstructor
 public class Client {
-    String firstName;
-    String patranomyc;
-    String secondName;
-    Integer age;
-    Phone phone;
-    List<Product> products;
+    private String firstName;
+    private String patranomyc;
+    private String secondName;
+    private Integer age;
+    private Phone phone;
+    private List<Product> products;
 }

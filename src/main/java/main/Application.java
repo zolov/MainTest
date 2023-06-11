@@ -1,12 +1,9 @@
 package main;
 
-import static java.util.stream.Collectors.reducing;
-
 import lombok.examples.Client;
 import lombok.examples.Phone;
 import lombok.examples.Product;
 
-import javax.jms.JMSException;
 import java.util.List;
 
 /**
@@ -15,7 +12,7 @@ import java.util.List;
  * @author Igor_Zolov
  */
 public class Application {
-    public static void main(String[] args) throws JMSException {
+    public static void main(String[] args) {
 
 
         Client client = Client.of(
